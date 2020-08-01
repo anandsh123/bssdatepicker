@@ -39,7 +39,7 @@ import { BSSuperDatePickerModule } from 'bssuper-date-picker';
 })
 export class AppModule { }
  ```
-Note : I consider you already have installed the bootstrap module and imported like above example,because this __BSSuperDatePickerModule__ module workes on bootstrap date picker.
+Note : I consider you already have installed the bootstrap module and imported like above example,because this __BSSuperDatePickerModule__ module works on bootstrap date picker.
 
 ## Usage
 Just set the __option__ attribute in your existing bootstrap date picker as below :
