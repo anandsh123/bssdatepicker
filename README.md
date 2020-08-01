@@ -40,3 +40,33 @@ import { BSSuperDatePickerModule } from 'bssuper-date-picker';
 export class AppModule { }
  ```
 Note : I consider you already have installed the bootstrap module and imported like above example,because this __BSSuperDatePickerModule__ module workes on bootstrap date picker.
+
+## Usage
+Just set the __option__ attribute in your existing bootstrap date picker as below :
+
+app.component.ts file --
+
+ ```
+import { Component } from '@angular/core';
+ 
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html'  
+})
+export class AppComponent {
+  title = 'my-app';
+  disableWeekend = true;
+  highlightWeekend = true;
+   
+}
+ ```
+
+app.component.html file --
+'''
+ 
+       <input type="text" ngbDatepicker  #d="ngbDatepicker" [option]="{disableWeekend : disableWeekend,
+        highlightWeekend :highlightWeekend}"   />
+       <button (click)="d.toggle()"><i class='fas fa-calendar-alt'></i></button>
+'''       
+Set the value in __disableWeekend__ and   __highlightWeekend__  property of __option__ attributes.   
+
