@@ -10,7 +10,7 @@ To install this component to an external project, follow the procedure:
 
 1. __npm install bssuper-date-picker --save__
 
-2. Add __BSSuperDatePickerModule__ import to your __@NgModule__ like example below
+2. Add __BSSuperDatePickerModule__  to import array of your __@NgModule__ like below example :
     
  ```
     
