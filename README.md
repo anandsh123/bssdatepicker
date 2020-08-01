@@ -62,11 +62,11 @@ export class AppComponent {
  ```
 
 app.component.html file --
-'''
+ ```
  
        <input type="text" ngbDatepicker  #d="ngbDatepicker" [option]="{disableWeekend : disableWeekend,
         highlightWeekend :highlightWeekend}"   />
        <button (click)="d.toggle()"><i class='fas fa-calendar-alt'></i></button>
-'''       
+ ```    
 Set the value in __disableWeekend__ and   __highlightWeekend__  property of __option__ attributes.   
 
