@@ -11,8 +11,10 @@ To install this component to an external project, follow the procedure:
 1. __npm install bssuper-date-picker --save__
 
 2. Add __BSSuperDatePickerModule__ import to your __@NgModule__ like example below
-    ```ts
-    import { BrowserModule } from '@angular/platform-browser';
+    
+ ```
+    
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -23,7 +25,7 @@ import { BSSuperDatePickerModule } from 'bssuper-date-picker';
 
 @NgModule({
   declarations: [
-    AppComponent   
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -36,5 +38,5 @@ import { BSSuperDatePickerModule } from 'bssuper-date-picker';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-    ```
+ ```
 
