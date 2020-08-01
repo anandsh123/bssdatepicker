@@ -1,2 +1,40 @@
 # bssdatepicker
 This angular application is an extension of bootstrap angular date picker. You can highlight and disable weekend in your bootstrap date picker.
+ 
+Online demo is [here](https://anandsh123.github.io/bssdatepicker/)
+
+ 
+## Installation
+
+To install this component to an external project, follow the procedure:
+
+1. __npm install bssuper-date-picker --save__
+
+2. Add __BSSuperDatePickerModule__ import to your __@NgModule__ like example below
+    ```ts
+    import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { NgbModule, NgbDatepicker } from '@ng-bootstrap/ng-bootstrap';
+import { BSSuperDatePickerModule } from 'bssuper-date-picker';
+ 
+
+@NgModule({
+  declarations: [
+    AppComponent   
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    NgbModule,
+    BSSuperDatePickerModule
+  ],
+  providers: [NgbDatepicker],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+    ```
+
