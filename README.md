@@ -1,27 +1,72 @@
-# MyApp
+# bssdatepicker
+This angular application is an extension of bootstrap angular date picker. You can highlight and disable weekend in your bootstrap date picker.
+ 
+Online demo is [here](https://anandsh123.github.io/bssdatepicker/)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
+ 
+## Installation
 
-## Development server
+To install this component to an external project, follow the procedure:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+1. __npm install bssuper-date-picker --save__
 
-## Code scaffolding
+2. Add __BSSuperDatePickerModule__  to import array of your __@NgModule__ like below example :
+    
+ ```
+    
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { NgbModule, NgbDatepicker } from '@ng-bootstrap/ng-bootstrap';
+import { BSSuperDatePickerModule } from 'bssuper-date-picker';
+ 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    NgbModule,
+    BSSuperDatePickerModule
+  ],
+  providers: [NgbDatepicker],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+ ```
+Note : I consider you already have installed the bootstrap module and imported like above example,because this __BSSuperDatePickerModule__ module works on bootstrap date picker.
 
-## Build
+## Usage
+Just set the __option__ attribute in your existing bootstrap date picker as below :
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+app.component.ts file --
 
-## Running unit tests
+ ```
+import { Component } from '@angular/core';
+ 
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html'  
+})
+export class AppComponent {
+  title = 'my-app';
+  disableWeekend = true;
+  highlightWeekend = true;
+   
+}
+ ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+app.component.html file --
+ ```
+ 
+       <input type="text" ngbDatepicker  #d="ngbDatepicker" [option]="{disableWeekend : disableWeekend,
+        highlightWeekend :highlightWeekend}"   />
+       <button (click)="d.toggle()"><i class='fas fa-calendar-alt'></i></button>
+ ```    
+Set the value in __disableWeekend__ and   __highlightWeekend__  property of __option__ attributes.   
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
