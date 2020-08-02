@@ -2,8 +2,5 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+@import '../dist/bssuper-date-picker/index.scss';
 
-.ngb-dp-day.disabled span.disabled {
-
-   background-color: #e6e6e6 !important;
- }

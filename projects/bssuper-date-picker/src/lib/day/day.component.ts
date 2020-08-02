@@ -1,15 +1,15 @@
-import { Component, OnInit, TemplateRef, ViewChild, Input } from '@angular/core';
-import { DayTemplateContext } from '@ng-bootstrap/ng-bootstrap/datepicker/datepicker-day-template-context';
-import { NgbDate, NgbCalendar } from '@ng-bootstrap/ng-bootstrap';
+import { Component, OnInit, TemplateRef, ViewChild, Input, ViewEncapsulation } from '@angular/core';
+ import { NgbDate, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-day',
   templateUrl: './day.component.html',
-  styleUrls: ['./day.component.scss']
+  styleUrls: ['./day.component.scss'],
+ 
 })
 export class DayComponent   {
 
-  @ViewChild('defaultDayTemplate', {static: true}) public defaultDayTemplate: TemplateRef<DayTemplateContext>;
+  @ViewChild('defaultDayTemplate', {static: true}) public defaultDayTemplate: TemplateRef<any>;
   
   @Input() highlightWeekend: boolean = false;
 

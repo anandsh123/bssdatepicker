@@ -3,6 +3,6 @@
   <ng-template #defaultDayTemplate let-date let-currentMonth="currentMonth" let-selected="selected" let-disabled="disabled" let-focused="focused">
     <span class="custom-day" [class.weekend]="highlightWeekend && isWeekend(date)" [class.disabled]="isWeekend(date)" [class.focused]="focused"
           [class.bg-primary]="selected" [class.outside]="date.month !== currentMonth" [class.text-muted]="date.month !== currentMonth">
-      {{ date.day }}
+     {{ date.day }}
     </span>
   </ng-template>

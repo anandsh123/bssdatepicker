@@ -296,22 +296,83 @@
       visibility: hidden;
     }
   }
+
+  .maintitle {
+    background-color: #eee;
+    height: 180px;
+    border-bottom: 1px solid #ccc;
+    background: linear-gradient(to right,rgba(44,83,158,1) 0,rgba(44,83,158,1) 100%);
+    text-align: center;
+}
+.maintitle div:first-child {
+    display: inline-block;
+    color: #fff;
+    font-size: 46px;
+    font-weight: 700;
+    margin-top: 48px;
+}
+.maintitle div:last-child {
+    color: #fff;
+    font-size: 18px;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
+  margin-top:28%;
+  padding: 0px 40% 0px 43%;
+}
+ 
 </style>
-<h1>Custom Date Picker</h1>
-<div class="row">
-  <div class="col-xl-3">
+
+<div   class="maintitle">
+  <div  >Custom Bootstrap Date Picker Demo</div>
+  <div  >Made In Angular</div>
+</div>
+
+
+
+
+<div class="p-1" >
+<div style="padding:0px 20% 0px 20%">
+<div class="row" >
+  <div class="col-xl-4">
+    Disable Weekend :
+       <input type="checkbox"  [(ngModel)]="disableWeekend" />
+           
+      </div>
+      <div class="col-xl-4">
+        Highlight Weekend :
+           <input type="checkbox"  [(ngModel)]="highlightWeekend" />
+               
+          </div>
+ 
+</div>
+<div class="row pt-2">
+  <div class="col-xl-4">
        Bootstrap Datepicker :
-       <input type="text" ngbDatepicker  #d="ngbDatepicker" [option]="{disableWeekend : true,
-        highlightWeekend :true}"  />
-       <button (click)="d.toggle()">Toggle</button>
+       <input type="text" ngbDatepicker  #d="ngbDatepicker" [option]="{disableWeekend : disableWeekend,
+        highlightWeekend :highlightWeekend}"   />
+       <button (click)="d.toggle()"><i class='fas fa-calendar-alt'></i></button>
+       
   </div>
   <div class="col-xl-6">
        
   </div>
 </div>
-
+<h4 style="margin-top: 20%;">
+  <u>To get it from NPM,click <a href="https://www.npmjs.com/package/bssuper-date-picker">HERE</a></u>
+</h4>
+</div>
+ </div>
 
 <router-outlet></router-outlet>
 
+<footer>
+  <p>Developer: Anand Sharma<br>
+  <a href="anand.sh08@gmail.com">anand.sh08@gmail.com</a></p>
+</footer>
 
  

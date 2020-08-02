@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgbDatepickerConfig } from '@ng-bootstrap/ng-bootstrap';
+ 
 
 @Component({
   selector: 'app-root',
@@ -8,10 +8,7 @@ import { NgbDatepickerConfig } from '@ng-bootstrap/ng-bootstrap';
 })
 export class AppComponent {
   title = 'my-app';
-
-  today:Date = new Date();
-
-  constructor(private _picker  : NgbDatepickerConfig) { 
-    //this._picker.dayTemplate
-  }
+  disableWeekend = true;
+  highlightWeekend = true;
+   
 }
